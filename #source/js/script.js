@@ -1,3 +1,5 @@
+"use strict"
+
 // МЕНЮ-БУРГЕР
 $(document).ready(function () {
 	$('.header__burger').click(function (event) {
@@ -14,6 +16,15 @@ $(document).ready(function () {
 	});
 });
 
+
+//ВЫПАДАЮЩЕЕ МЕНЮ
+let user = document.querySelector(".user");
+user.addEventListener("click", function () {
+	let drop = document.querySelector("drop-down");
+	drop.classList.toggle("_active");
+});
+
+
 // ПЛАВНАЯ НАВИГАЦИЯ
 $(function () {
 	$("a[href^='#']").click(function () {
@@ -24,63 +35,18 @@ $(function () {
 	});
 });
 
+
 $(function () {
 	$('.footer__logo').click(function () {
 		$('html, body').animate({ scrollTop: 0 }, 'slow');
 	});
 });
 
-// СЛАЙДЕР PORTFOLIO
-$(document).ready(function () {
-	$('.portfolio__slider').slick({
-		slidesToShow: 2,
-		slidesToScroll: 2,
-		dots: true,
-		speed: 500,
-		cssEase: 'ease-out',
-		touchThreshold: 10,
-		//centerMode: true,
-		centerPadding: '1px',
-		adaptiveHeight: true,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					dots: false,
-				}
-			},
-		]
-	});
-});
 
-// СЛАЙДЕР PROFESSION
-$(document).ready(function () {
-	$('.profession-slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: true,
-		speed: 500,
-		cssEase: 'ease-out',
-		touchThreshold: 10,
-		//centerMode: true,
-		centerPadding: '1px',
-		adaptiveHeight: true,
-	});
-});
 
-// СЛАЙДЕР DIRECTION
-$(document).ready(function () {
-	$('.direction-slider').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: true,
-		speed: 500,
-		cssEase: 'ease-out',
-		touchThreshold: 10,
-		//centerMode: true,
-		centerPadding: '1px',
-		adaptiveHeight: true,
-	});
-});
+
+
+
+
+
+
