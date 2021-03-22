@@ -16,15 +16,6 @@ $(document).ready(function () {
 	});
 });
 
-
-//ВЫПАДАЮЩЕЕ МЕНЮ
-let user = document.querySelector(".user");
-user.addEventListener("click", function () {
-	let drop = document.querySelector("drop-down");
-	drop.classList.toggle("_active");
-});
-
-
 // ПЛАВНАЯ НАВИГАЦИЯ
 $(function () {
 	$("a[href^='#']").click(function () {
@@ -41,6 +32,8 @@ $(function () {
 		$('html, body').animate({ scrollTop: 0 }, 'slow');
 	});
 });
+
+
 
 
 
