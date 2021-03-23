@@ -24,7 +24,6 @@ arrow.addEventListener("click", function () {
 let swiper = new Swiper('.main__slider', {
 	speed: 700,
 	parallax: true,
-	autoHeight: true,
 	navigation: {
 		nextEl: '.main__next',
 		prevEl: '.main__prev',
