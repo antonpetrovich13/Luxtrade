@@ -29,3 +29,11 @@ let swiper = new Swiper('.main__slider', {
 		prevEl: '.main__prev',
 	},
 });
+
+let lots = new Swiper('.lots__slider', {
+	slidesPerView: 3,
+	navigation: {
+		nextEl: '.navigation__next',
+		prevEl: '.navigation__prev',
+	},
+});
