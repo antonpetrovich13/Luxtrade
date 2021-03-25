@@ -22,7 +22,7 @@ arrow.addEventListener("click", function () {
 
 //СЛАЙДЕР MAIN
 let swiper = new Swiper('.main__slider', {
-	speed: 700,
+	speed: 800,
 	parallax: true,
 	navigation: {
 		nextEl: '.main__next',
@@ -31,9 +31,37 @@ let swiper = new Swiper('.main__slider', {
 });
 
 let lots = new Swiper('.lots__slider', {
-	slidesPerView: 3,
+	speed: 500,
+	keyboard: true,
+	loop: true,
+	effect: 'coverflow',
 	navigation: {
 		nextEl: '.navigation__next',
 		prevEl: '.navigation__prev',
+	},
+	breakpoints: {
+		280: {
+			slidesPerView: 1,
+			effect: 'slide',
+		},
+		600: {
+			slidesPerView: 2,
+			effect: 'slide',
+			spaceBetween: 50,
+		},
+		970: {
+			initialSlide: 1,
+			centeredSlides: true,
+			effect: 'coverflow',
+			slidesPerView: 3,
+			spaceBetween: 130,
+			coverflowEffect: {
+				rotate: 20,
+				stretch: 0,
+				depth: 100,
+				modifier: 1,
+				slideShadows: true,
+			},
+		},
 	},
 });
