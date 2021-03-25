@@ -175,6 +175,11 @@
 }
 
 //  <LOTS>  =================================================\\
+
+.swiper-slide {
+	height: auto !important; // <!><!><!> ДЛЯ РАБОТЫ FLEX: 1 1 AUTO
+}
+
 .title {
 	&__wrapper {
 		display: flex;
@@ -309,15 +314,16 @@
 }
 .lots {
 	padding: 85px 0px 63px 0px;
-	margin: 0px 0px 63px 0px;
 	&__slider {
 	}
 
 	&__wrapper {
-		height: auto;
 	}
 
 	&__slide {
+	}
+	@media (max-width: 768px) {
+		padding: 50px 0px;
 	}
 }
 .slide-lots {
@@ -325,21 +331,20 @@
 	&__cost {
 	}
 	&__wrapper {
+		min-height: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 0px -50px;
 	}
 
 	&__column {
 		position: relative;
-		flex: 0 1 33.333%;
-		padding: 0px 50px;
 		&_1 {
 			z-index: 1;
 		}
 		&_2 {
 			z-index: 2;
+			flex: 1 1 auto;
 		}
 		&_3 {
 		}
@@ -434,6 +439,9 @@
 			left: 0;
 			background: linear-gradient(0deg, #4b3813 0%, #ceb17c 50%, #6e5933 100%);
 		}
+	}
+	@media (max-width: 600px) {
+		margin: 30px 0px 0px 0px;
 	}
 }
 .cost {
@@ -564,7 +572,7 @@
 }
 .navigation {
 	cursor: pointer;
-	margin: 50px 0px 0px 0px;
+	margin: 72px 0px 0px 0px;
 	&__wrapper {
 		display: flex;
 		align-items: center;
@@ -691,6 +699,30 @@
 			height: 12px;
 			border: 1px solid #bb9c66;
 			border-radius: 50%;
+		}
+	}
+	@media (max-width: 600px) {
+		margin: 55px 0px 0px 0px;
+	}
+	@media (max-width: 430px) {
+		&__text {
+			white-space: nowrap;
+		}
+		&__span-1 {
+			width: 70px;
+			margin: 0px 0px 0px 0px;
+		}
+		&__prev {
+			&:before {
+				content: "";
+				right: 20px;
+			}
+		}
+		&__next {
+			&:before {
+				content: "";
+				right: 20px;
+			}
 		}
 	}
 }

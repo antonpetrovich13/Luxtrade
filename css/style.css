@@ -641,6 +641,9 @@ button {
     font-size: 30px;
     line-height: 35px; } }
 
+.swiper-slide {
+  height: auto !important; }
+
 .title__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -753,14 +756,15 @@ button {
     width: 50px; } }
 
 .lots {
-  padding: 85px 0px 63px 0px;
-  margin: 0px 0px 63px 0px; }
-  .lots__wrapper {
-    height: auto; }
+  padding: 85px 0px 63px 0px; }
+  @media (max-width: 768px) {
+    .lots {
+      padding: 50px 0px; } }
 
 .slide-lots {
   margin: 50px 0px 0px 0px; }
   .slide-lots__wrapper {
+    min-height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -770,18 +774,16 @@ button {
     flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
-    margin: 0px -50px; }
+    align-items: center; }
   .slide-lots__column {
-    position: relative;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 33.333%;
-    flex: 0 1 33.333%;
-    padding: 0px 50px; }
+    position: relative; }
     .slide-lots__column_1 {
       z-index: 1; }
     .slide-lots__column_2 {
-      z-index: 2; }
+      z-index: 2;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
   .slide-lots__imagine {
     position: relative;
     display: -webkit-box;
@@ -880,6 +882,9 @@ button {
       background: -webkit-linear-gradient(bottom, #4b3813 0%, #ceb17c 50%, #6e5933 100%);
       background: -o-linear-gradient(bottom, #4b3813 0%, #ceb17c 50%, #6e5933 100%);
       background: linear-gradient(0deg, #4b3813 0%, #ceb17c 50%, #6e5933 100%); }
+  @media (max-width: 600px) {
+    .slide-lots {
+      margin: 30px 0px 0px 0px; } }
 
 .cost {
   margin: 30px 0px 0px 0px;
@@ -1016,7 +1021,7 @@ button {
 
 .navigation {
   cursor: pointer;
-  margin: 50px 0px 0px 0px; }
+  margin: 72px 0px 0px 0px; }
   .navigation__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1158,3 +1163,18 @@ button {
       height: 12px;
       border: 1px solid #bb9c66;
       border-radius: 50%; }
+  @media (max-width: 600px) {
+    .navigation {
+      margin: 55px 0px 0px 0px; } }
+  @media (max-width: 430px) {
+    .navigation__text {
+      white-space: nowrap; }
+    .navigation__span-1 {
+      width: 70px;
+      margin: 0px 0px 0px 0px; }
+    .navigation__prev:before {
+      content: "";
+      right: 20px; }
+    .navigation__next:before {
+      content: "";
+      right: 20px; } }
