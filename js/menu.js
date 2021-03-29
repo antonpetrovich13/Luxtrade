@@ -1,24 +1,16 @@
 //ВЫПАДАЮЩЕЕ МЕНЮ
 let user = document.querySelector(".user__wrapper");
+let drop = document.querySelector(".drop-down");
 user.addEventListener("click", function (e) {
-	let drop = document.querySelector(".drop-down");
 	drop.classList.toggle("_active");
 });
 
 document.documentElement.addEventListener("click", function (e) {
 	if (!e.target.closest('.user')) {
-		let drop = document.querySelector(".drop-down");
 		drop.classList.remove("_active");
 	}
 });
 
-/*//АНИМАЦИЯ ЗАГРУЗКИ
-let arrow = document.querySelector(".main__slider");
-let load = document.querySelector(".main__load");
-arrow.addEventListener("click", function () {
-	//alert("Hi");
-	load.classList.toggle("_active");
-});*/
 
 //СЛАЙДЕР MAIN
 let swiper = new Swiper('.main__slider', {
@@ -43,6 +35,7 @@ let lots = new Swiper('.lots__slider', {
 		280: {
 			slidesPerView: 1,
 			effect: 'slide',
+			autoHeight: true,
 		},
 		600: {
 			slidesPerView: 2,

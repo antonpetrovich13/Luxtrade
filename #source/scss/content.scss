@@ -318,9 +318,15 @@
 	}
 
 	&__wrapper {
+		margin: 0px 0px 50px 0px;
 	}
 
 	&__slide {
+	}
+	@media (max-width: 600px) {
+		&__wrapper {
+			margin: 0px 0px 55px 0px;
+		}
 	}
 	@media (max-width: 768px) {
 		padding: 50px 0px;
@@ -442,6 +448,19 @@
 	}
 	@media (max-width: 600px) {
 		margin: 30px 0px 0px 0px;
+		&__column {
+			&_2 {
+				flex: 0 0 auto;
+			}
+		}
+		&__img {
+			flex: 0 1 190px;
+		}
+		&__rhombus {
+			bottom: -26%;
+			left: 50%;
+			transform: rotate(45deg) translate(-50%, 26%);
+		}
 	}
 }
 .cost {
@@ -572,7 +591,8 @@
 }
 .navigation {
 	cursor: pointer;
-	margin: 72px 0px 0px 0px;
+	padding: 25px 0px 0px 0px;
+	min-height: 100px;
 	&__wrapper {
 		display: flex;
 		align-items: center;
@@ -702,7 +722,7 @@
 		}
 	}
 	@media (max-width: 600px) {
-		margin: 55px 0px 0px 0px;
+		//padding: 85px 0px 0px 0px;
 	}
 	@media (max-width: 430px) {
 		&__text {
