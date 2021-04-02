@@ -58,3 +58,70 @@ let lots = new Swiper('.lots__slider', {
 		},
 	},
 });
+
+
+
+/*document.querySelectorAll(".servicies__link").forEach(function (el) {
+	el.addEventListener("mouseover", function (ev) {
+		alert('1');
+		if (ev.target = el) {
+			alert("2");
+			let servicies = document.querySelectorAll(".servicies__button");
+			alert("3");
+			this.servicies.classList.add("_active");
+			alert("4");
+		}
+	});
+})*/
+
+/*let link = document.querySelectorAll(".servicies__link");
+let servicies = document.querySelectorAll(".servicies__button");
+
+link.forEach(function (link) {
+	link.addEventListener("mouseover", function (mouse) {
+		servicies.forTarget(function (serv) {
+			serv.classList.add("_active");
+		})
+	});
+})
+
+link.forEach(function (link) {
+	link.addEventListener("mouseout", function (mouse) {
+		servicies.forEach(function (serv) {
+			serv.classList.remove("_active");
+		})
+	});
+})*/
+
+/*
+link.forEach(function (link) {
+	link.addEventListener("mouseover", function (mouse) {
+		alert("0");
+		if (mouse.target) {
+			servicies.classList.add("_active");
+			alert("1");
+		}
+	});
+})*/
+
+
+
+
+
+
+
+/*link.forEach(function (link) {
+	link.addEventListener("mouseout", function () {
+		servicies.classList.remove("_active");
+	});
+})*/
+
+//СЛАЙДЕР QUOTES
+let quotes = new Swiper('.quotes__slider', {
+	speed: 800,
+	loop: true,
+	effect: 'flip',
+	navigation: {
+		nextEl: '.quotes__arrow',
+	},
+});
