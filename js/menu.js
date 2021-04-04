@@ -125,3 +125,14 @@ let quotes = new Swiper('.quotes__slider', {
 		nextEl: '.quotes__arrow',
 	},
 });
+
+let anim = document.querySelector(".quotes__bottom");
+anim.addEventListener("click", function () {
+	let arrow = document.querySelector(".quotes__img");
+	arrow.classList.add('_active');
+})
+
+anim.addEventListener("transitionend", function () {
+	let arrow = document.querySelector(".quotes__img");
+	arrow.classList.remove('_active');
+})
