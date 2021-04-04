@@ -1262,8 +1262,10 @@
 	}
 }
 
+//  <QUOTES>  =================================================\\
+
 .quotes {
-	padding: 64px 0px 75px 0px;
+	padding: 64px 0px 0px 0px;
 	&__title {
 	}
 
@@ -1369,6 +1371,21 @@
 		margin: 0px auto;
 	}
 
+	&__img {
+		transition: all 0.3s ease 0s;
+		&._active {
+			transform: rotate(0deg);
+		}
+	}
+	@keyframes anim {
+		0% {
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
 	&__span-2 {
 		display: block;
 		position: absolute;
@@ -1425,6 +1442,266 @@
 			&:after {
 				right: 97px;
 			}
+		}
+	}
+}
+
+//  <INFO>  =================================================\\
+
+.info {
+	padding: 47px 0px 52px 0px;
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0px -43.5px;
+	}
+
+	&__column {
+		flex: 0 1 50%;
+		padding: 0px 43.5px;
+		margin: 28px 0px;
+		&_4 {
+			align-self: flex-end;
+		}
+	}
+
+	&__news {
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+	}
+
+	&__image {
+		margin: 0px 22px 0px 0px;
+	}
+
+	&__title {
+		font-family: "PFDinTextCondPro";
+		font-size: 35px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #000000;
+	}
+
+	&__body {
+		max-width: 410px;
+		margin: 34px 0px 0px 0px;
+		&_sub {
+			margin: 26px 0px 0px 0px;
+		}
+	}
+
+	&__block {
+		margin: 25px 0px;
+		&:first-child {
+			margin: 0px 0px 25px 0px;
+		}
+		&:last-child {
+			margin: 25px 0px 0px 0px;
+		}
+	}
+
+	&__date {
+		font-family: "PTSans", sans-serif;
+		font-size: 12px;
+		font-weight: 400;
+		color: #bb9c66;
+	}
+
+	&__link {
+		display: block;
+		margin: 13px 0px 10px 0px;
+		font-size: 15px;
+		font-weight: 700;
+		text-decoration: underline;
+		color: #333333;
+	}
+
+	&__text {
+		font-size: 15px;
+		color: #333333bb;
+		display: block;
+		line-height: 22px;
+	}
+
+	&__events {
+	}
+
+	&__subscribe {
+	}
+
+	&__mail {
+	}
+
+	&__form {
+		position: relative;
+	}
+
+	&__input {
+		width: 100%;
+		height: 50px;
+		border: 3px solid #bb9c66;
+		padding: 0px 120px 0px 26px;
+		font-family: "PTSans", sans-serif;
+		font-size: 13px;
+		line-height: 25px;
+		font-weight: 400;
+		color: #4f4f4f;
+	}
+
+	&__button {
+		z-index: 2;
+		position: absolute;
+		display: block;
+		width: auto;
+		height: 100%;
+		top: 0;
+		right: 55px;
+		background-color: transparent;
+		& p {
+			position: relative;
+			font-family: "PFDinTextCondPro";
+			font-size: 21.3px;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: #1c242a;
+			&:before {
+				content: "";
+				cursor: auto;
+				position: absolute;
+				top: 50%;
+				left: -20px;
+				display: block;
+				width: 1px;
+				height: 32px;
+				background-color: #bb9c66;
+				transform: translate(0, -50%);
+			}
+		}
+	}
+
+	&__span-main {
+		position: absolute;
+		top: 50%;
+		right: -32px;
+		display: block;
+		width: 24px;
+		height: 1px;
+		background-color: #bb9c66;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 1px;
+			height: 12px;
+			top: -1px;
+			right: 4px;
+			background-color: #bb9c66;
+			transform: rotate(45deg);
+		}
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 1px;
+			height: 12px;
+			bottom: -1px;
+			right: 4px;
+			background-color: #bb9c66;
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__span-1 {
+		display: block;
+		position: absolute;
+		width: 1px;
+		height: 12px;
+		top: -1px;
+		right: 9px;
+		background-color: #bb9c66;
+		transform: rotate(45deg);
+	}
+
+	&__span-2 {
+		display: block;
+		position: absolute;
+		width: 1px;
+		height: 12px;
+		bottom: -1px;
+		right: 9px;
+		background-color: #bb9c66;
+		transform: rotate(-45deg);
+	}
+	@media (max-width: 769px) {
+		padding: 30px 0px;
+		&__wrapper {
+			margin: 0px -23.5px;
+		}
+
+		&__column {
+			padding: 0px 23.5px;
+		}
+
+		&__input {
+			padding: 0px 100px 0px 10px;
+		}
+	}
+	@media (max-width: 630px) {
+		&__button {
+			& p {
+				&:before {
+					left: -12px;
+				}
+			}
+		}
+	}
+	@media (max-width: 600px) {
+		&__column {
+			&_3,
+			&_4 {
+				flex: 0 1 100%;
+			}
+			&_3 {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		&__subscribe {
+			&_3 {
+				text-align: center;
+			}
+		}
+		&__top {
+			&_3 {
+				justify-content: center;
+			}
+		}
+	}
+	@media (max-width: 500px) {
+		&__wrapper {
+			margin: 0px 0px 0px 0px;
+		}
+		&__column {
+			margin: 20px 0px;
+			flex: 0 1 100%;
+			padding: 0px 0px 0px 0px;
+		}
+		&__body {
+			max-width: 100%;
+			margin: 22px 0px 0px 0px;
+			&_sub {
+				margin: 22px 0px 0px 0px;
+			}
+		}
+		&__top {
+			justify-content: center;
 		}
 	}
 }
