@@ -18,10 +18,10 @@
 			<div class="header__column header__column_1">
 				<div class="header__logotipe">
 					<a href="#" class="header__hammer">
-						<img src="img/header/hammer.png" alt="">
+						<img data-goto=".main" class="nav__link" src="img/header/hammer.png" alt="">
 					</a>
-					<a href="#" class="header__logo">
-						<img src="img/header/logo.png" alt="">
+					<a data-goto=".main" href="#" class="header__logo nav__link">
+						<img data-goto=".main" class="nav__link" src="img/header/logo.png" alt="">
 					</a>
 				</div>
 			</div>
@@ -34,11 +34,11 @@
 			<div class="header__column header__column_3">
 				<nav class="header__menu">
 					<ul class="header__list">
-						<li><a href="#" class="header__link">Главная</a></li>
-						<li><a href="#" class="header__link">Аукцион</a></li>
-						<li><a href="#" class="header__link">О проекте</a></li>
-						<li><a href="#" class="header__link">Партнерам</a></li>
-						<li><a href="#" class="header__link">Контакты</a></li>
+						<li><a data-goto=".main" href="#" class="header__link nav__link">Главная</a></li>
+						<li><a data-goto=".lots" href="#" class="header__link nav__link">Аукцион</a></li>
+						<li><a data-goto=".servicies" href="#" class="header__link nav__link">О проекте</a></li>
+						<li><a data-goto=".quotes" href="#" class="header__link nav__link">Партнерам</a></li>
+						<li><a data-goto=".footer" href="#" class="header__link nav__link">Контакты</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -1055,13 +1055,6 @@
 						</div>
 					</div>
 				</div>
-				<footer class="footer">
-	<div class="container">
-		<div class="footer__wrapper">
-
-		</div>
-	</div>
-</footer>
 			</div>
 			<div class="quotes">
 				<div class="container">
@@ -1215,9 +1208,10 @@
 						</div>
 						<div class="info__column info__column_4">
 							<div class="info__mail">
-								<form class="info__form" action="">
-									<input class="info__input" type="text" placeholder="Ваш e-mail">
-									<button type="reset" class="info__button">
+								<form id="form" class="info__form" action="">
+									<input class="info__input _req" id="formEmail" name="email" type="text"
+										placeholder="Ваш e-mail">
+									<button type="submit" class="info__button">
 										<p>Ok</p>
 										<span class="info__span-main">
 											<span class="info__span-1"></span>
@@ -1230,8 +1224,55 @@
 					</div>
 				</div>
 			</div>
-			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		</div>
+		<footer class="footer">
+	<div class="container-2">
+		<div class="footer__wrapper">
+			<div class="footer__column footer__column_1">
+				<div class="footer__logotype">
+					<div class="footer__logotype-top">
+						<a href="" class="footer__hammer">
+							<img data-goto=".main" class="nav__link" src="img/footer/hammer.png" alt="">
+						</a>
+						<a href="" class="footer__logo">
+							<img data-goto=".main" class="nav__link" src="img/footer/logo.png" alt="">
+						</a>
+					</div>
+					<div class="footer__logotype-bottom">
+						<div class="footer__text">Все права защищены © 2014</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__column footer__column_2">
+				<div class="footer__navigation">
+					<nav class="footer__menu-top">
+						<li><a data-goto=".main" href="" class="footer__link nav__link">Главная</a></li>
+						<li><a data-goto=".lots" href="" class="footer__link nav__link">Аукцион</a></li>
+						<li><a data-goto=".servicies" href="" class="footer__link nav__link">О проекте</a></li>
+						<li><a data-goto=".quotes" href="" class="footer__link nav__link">Партнерам</a></li>
+						<li><a data-goto=".footer" href="" class="footer__link nav__link">Контакты</a></li>
+						<li><a data-goto=".info" href="" class="footer__link nav__link">Новости</a></li>
+					</nav>
+					<nav class="footer__menu-bottom">
+						<li><a href="" class="footer__link">FAQ</a></li>
+						<li><a href="" class="footer__link">Реклама</a></li>
+						<li><a href="" class="footer__link">Соглашение</a></li>
+						<li><a href="" class="footer__link">Регистрация</a></li>
+						<li><a href="" class="footer__link">Услуги</a></li>
+					</nav>
+				</div>
+			</div>
+			<div class="footer__column footer__column_3">
+				<div class="footer__info">
+					<a href="tel:+7495222222" class="footer__phone"><span>+7 </span>(495) 22-22-22</a>
+					<div class="footer__info-bottom"><a href="" class="footer__back">Обратная связь</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/menu.js"></script>
 </body>
