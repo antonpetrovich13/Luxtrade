@@ -1,0 +1,265 @@
+.footer {
+	padding: 45px 0px 52px 0px;
+	background-color: #1c242a;
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__column {
+		white-space: nowrap;
+		&_2 {
+			margin: 0px 59px 0px 23px;
+		}
+	}
+
+	&__logotype {
+	}
+
+	&__logotype-top {
+	}
+
+	&__hammer {
+	}
+
+	&__logo {
+	}
+
+	&__logotype-bottom {
+	}
+
+	&__text {
+		margin: 27px 0px 0px 0px;
+		font-family: "PTSans", sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		color: #bb9c66;
+	}
+
+	&__navigation {
+		list-style: none;
+	}
+
+	&__menu-top {
+		white-space: nowrap;
+		display: flex;
+		& li {
+			margin: 0px 10px;
+			&:first-child {
+				margin: 0px 10px 0px 0px;
+			}
+			&:last-child {
+				margin: 0px 0px 0px 10px;
+			}
+		}
+	}
+
+	&__menu-bottom {
+		margin: 15px 0px 0px 0px;
+		display: flex;
+		& li {
+			margin: 0px 10px;
+			&:first-child {
+				margin: 0px 10px 0px 0px;
+			}
+			&:last-child {
+				margin: 0px 0px 0px 10px;
+			}
+		}
+	}
+
+	&__link {
+		transition: all 0.3s ease 0s;
+		font-family: "PFDinTextCondPro";
+		font-size: 14px;
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #ffffff;
+		&:hover {
+			color: #bb9c66;
+		}
+	}
+
+	&__info {
+	}
+
+	&__phone {
+		display: block;
+		font-family: "BravoRG";
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #bb9c66;
+		font-size: 50px;
+		position: relative;
+		& span {
+			display: inline-block;
+			font-size: 25px;
+			transform: translate(-8px, -78%);
+		}
+	}
+
+	&__info-bottom {
+		margin: 8px 0px 0px 0px;
+		text-align: right;
+	}
+
+	&__back {
+		position: relative;
+		background: url("../img/footer/01.png") left no-repeat;
+		padding: 0px 0px 0px 12px;
+		font-family: "PTSans", sans-serif;
+		font-size: 14px;
+		line-height: 21px;
+		font-weight: 400;
+		color: #bb9c66;
+		&:after {
+			transition: all 0.3s ease 0s;
+			content: "";
+			display: block;
+			position: absolute;
+			width: 88.5%;
+			height: 100%;
+			top: 0.5px;
+			right: 0;
+			border-bottom: 1px dashed #bb9c66;
+		}
+		&:hover {
+			&:after {
+				content: "";
+				opacity: 0;
+			}
+		}
+	}
+	@media (max-width: 1040px) {
+		padding: 40px 0px 40px 0px;
+		&__wrapper {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__column {
+			flex: 0 1 50%;
+			&_1 {
+				margin: 35px 0px 0px 0px;
+				order: 2;
+			}
+			&_2 {
+				order: 1;
+				margin: 0px 0px 0px 0px;
+			}
+			&_3 {
+				margin: 35px 0px 0px 0px;
+				order: 3;
+				align-self: flex-end;
+			}
+		}
+		&__menu-bottom {
+			justify-content: center;
+		}
+		&__info {
+			text-align: right;
+		}
+		&__text {
+			margin: 14px 0px 0px 0px;
+		}
+		&__info-bottom {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	@media (max-width: 560px) {
+		&__menu-top {
+			& li {
+				margin: 0px 5px;
+				&:first-child {
+					margin: 0px 5px 0px 0px;
+				}
+				&:last-child {
+					margin: 0px 0px 0px 5px;
+				}
+			}
+		}
+		&__menu-bottom {
+			& li {
+				margin: 0px 5px;
+				&:first-child {
+					margin: 0px 5px 0px 0px;
+				}
+				&:last-child {
+					margin: 0px 0px 0px 5px;
+				}
+			}
+		}
+	}
+	@media (max-width: 490px) {
+		padding: 30px 0px 15px 0px;
+		&__column {
+			flex: 0 1 100%;
+			&_1 {
+				margin: 30px 0px 0px 0px;
+				order: 3;
+			}
+			&_2 {
+				text-align: center;
+			}
+			&_3 {
+				margin: 30px 0px 0px 0px;
+				order: 2;
+			}
+		}
+		&__navigation {
+			display: flex;
+			justify-content: center;
+		}
+		&__menu-top {
+			flex: 0 1 50%;
+			display: flex;
+			flex-direction: column;
+			& li {
+				margin: 8px 0px;
+				&:first-child {
+					margin: 0px 0px 8px 0px;
+				}
+				&:last-child {
+					margin: 8px 0px 8px 0px;
+				}
+			}
+		}
+		&__link {
+			font-size: 16px;
+		}
+		&__menu-bottom {
+			margin: 0px 0px 0px 0px;
+			flex: 0 1 50%;
+			display: flex;
+			flex-direction: column;
+			align-self: flex-start;
+			& li {
+				margin: 8px 0px;
+				&:first-child {
+					margin: 0px 0px 8px 0px;
+				}
+				&:last-child {
+					margin: 8px 0px 8px 0px;
+				}
+			}
+		}
+		&__logotype {
+			text-align: center;
+		}
+		&__info {
+			text-align: center;
+		}
+		&__info-bottom {
+			margin: 5px 0px 0px 0px;
+			text-align: center;
+		}
+		&__phone {
+			font-size: 40px;
+			& span {
+				display: inline-block;
+				font-size: 20px;
+				transform: translate(-8px, -78%);
+			}
+		}
+	}
+}

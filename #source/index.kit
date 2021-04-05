@@ -988,7 +988,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- @import "footer.kit" -->
 			</div>
 			<div class="quotes">
 				<div class="container">
@@ -1142,9 +1141,10 @@
 						</div>
 						<div class="info__column info__column_4">
 							<div class="info__mail">
-								<form class="info__form" action="">
-									<input class="info__input" type="text" placeholder="Ваш e-mail">
-									<button type="reset" class="info__button">
+								<form id="form" class="info__form" action="">
+									<input class="info__input _req" id="formEmail" name="email" type="text"
+										placeholder="Ваш e-mail">
+									<button type="submit" class="info__button">
 										<p>Ok</p>
 										<span class="info__span-main">
 											<span class="info__span-1"></span>
@@ -1157,8 +1157,10 @@
 					</div>
 				</div>
 			</div>
-			<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-			<!-- @import "js.kit" -->
+		</div>
+		<!-- @import "footer.kit" -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<!-- @import "js.kit" -->
 </body>
 
 </html>

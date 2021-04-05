@@ -1,0 +1,89 @@
+// <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ> ============================================================================
+@import "nullstyle.scss";
+body {
+	font-size: 14px;
+	color: #000;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+// <ПОДКЛЮЧЕНИЕ ШРИФТОВ> ====================================================================================
+@font-face {
+	font-family: "BravoRG";
+	src: url("../fonts/BravoRGRegular.eot");
+	src: local("☺"), url("../fonts/BravoRGRegular.woff") format("woff"),
+		url("../fonts/BravoRGRegular.ttf") format("truetype"), url("../fonts/BravoRGRegular.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "CeremoniousOne";
+	src: url("../fonts/ceremonious_one.eot");
+	src: local("☺"), url("../fonts/ceremonious_one.woff") format("woff"),
+		url("../fonts/ceremonious_one.ttf") format("truetype"), url("../fonts/ceremonious_one.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PFDinTextCondPro";
+	src: url("../fonts/pfdintextcondpro-medium.eot");
+	src: local("☺"), url("../fonts/pfdintextcondpro-medium.woff") format("woff"),
+		url("../fonts/pfdintextcondpro-medium.ttf") format("truetype"),
+		url("../fonts/pfdintextcondpro-medium.svg") format("svg");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "PFDinTextCondPro";
+	src: url("../fonts/pfdintextcondpro-regular.eot");
+	src: local("☺"), url("../fonts/pfdintextcondpro-regular.woff") format("woff"),
+		url("../fonts/pfdintextcondpro-regular.ttf") format("truetype"),
+		url("../fonts/pfdintextcondpro-regular.svg") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+
+html,
+body {
+	font-family: "PFDinTextCondPro";
+	font-weight: 500;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a,
+button {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+// <ОБОЛОЧКА, КОНТЕЙНЕР> ====================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	flex: 1 1 auto;
+}
+.container {
+	max-width: 958px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+.container-2 {
+	max-width: 968px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ> ===============================================================================
+@import "header.scss";
+@import "content.scss";
+@import "footer.scss";
+
+// <ОСНОВНОЙ БЛОК> ============================================================================================
