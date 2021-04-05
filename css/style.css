@@ -195,8 +195,23 @@ button {
         text-transform: uppercase;
         letter-spacing: 0.1em;
         color: #ffffff; }
-        .header__list li a:hover {
-          color: #cbaa72; }
+  .header__link {
+    position: relative; }
+    .header__link:hover:before {
+      opacity: 1;
+      top: 100%; }
+    .header__link:before {
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      content: "";
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      left: 0;
+      background-color: #cbaa72; }
   .header__touch {
     position: relative;
     z-index: 2;
@@ -1914,8 +1929,8 @@ button {
     color: #4f4f4f; }
     .info__input._error {
       border: 3px solid rgba(218, 12, 12, 0.767);
-      -webkit-box-shadow: 0px 0px 10px 2px #da0c0c;
-      box-shadow: 0px 0px 10px 2px #da0c0c; }
+      -webkit-box-shadow: 0px 0px 10px 4px #da0c0c;
+      box-shadow: 0px 0px 10px 4px #da0c0c; }
   .info__button {
     z-index: 2;
     position: absolute;
@@ -2105,9 +2120,23 @@ button {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #ffffff; }
-    .footer__link:hover {
-      color: #bb9c66; }
+    color: #ffffff;
+    position: relative; }
+    .footer__link:hover:before {
+      opacity: 1;
+      top: 100%; }
+    .footer__link:before {
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      content: "";
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 1.5px;
+      top: 50%;
+      left: 0;
+      background-color: #cbaa72; }
   .footer__phone {
     display: block;
     font-family: "BravoRG";

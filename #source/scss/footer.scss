@@ -76,8 +76,21 @@
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		color: #ffffff;
-		&:hover {
-			color: #bb9c66;
+		position: relative;
+		&:hover:before {
+			opacity: 1;
+			top: 100%;
+		}
+		&:before {
+			transition: all 0.3s ease 0s;
+			content: "";
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			height: 1.5px;
+			top: 50%;
+			left: 0;
+			background-color: #cbaa72;
 		}
 	}
 
