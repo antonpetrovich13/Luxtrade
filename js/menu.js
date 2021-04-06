@@ -1,3 +1,43 @@
+
+
+//АНИМАЦИЯ ПРИ СКРОЛЛЕ
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+	window.addEventListener('scroll', animOnScroll);
+	function animOnScroll() {
+		for (let index = 0; index < animItems.length; index++) {
+			const animItem = animItems[index];
+			const animItemHeight = animItem.offsetHeight;
+			const animItemOffset = offset(animItem).top;
+			const animStart = 4;
+
+			let animItemPoint = window.innerHeight - animItemHeight / animStart;
+			if (animItemHeight > window.innerHeight) {
+				animItemPoint = window.innerHeight - window.innerHeight / animStart;
+			}
+
+			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+				animItem.classList.add('_active');
+			} else {
+				if (!animItem.classList.contains('_anim-no-hide')) {
+					animItem.classList.remove('_active');
+				}
+			}
+		}
+	}
+	function offset(el) {
+		const rect = el.getBoundingClientRect(),
+			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+	}
+
+	setTimeout(() => {
+		animOnScroll();
+	}, 300);
+}
+
 //ВЫПАДАЮЩЕЕ МЕНЮ
 let user = document.querySelector(".user__wrapper");
 let drop = document.querySelector(".drop-down");
@@ -12,7 +52,6 @@ document.documentElement.addEventListener("click", function (e) {
 });
 
 //НАВИГАЦИЯ
-
 const menuLinks = document.querySelectorAll(".nav__link[data-goto]");
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
@@ -81,58 +120,6 @@ let lots = new Swiper('.lots__slider', {
 		},
 	},
 });
-
-
-
-/*document.querySelectorAll(".servicies__link").forEach(function (el) {
-	el.addEventListener("mouseover", function (ev) {
-		alert('1');
-		if (ev.target = el) {
-			alert("2");
-			let servicies = document.querySelectorAll(".servicies__button");
-			alert("3");
-			this.servicies.classList.add("_active");
-			alert("4");
-		}
-	});
-})*/
-
-/*let link = document.querySelectorAll(".servicies__link");
-let servicies = document.querySelectorAll(".servicies__button");
-
-link.forEach(function (link) {
-	link.addEventListener("mouseover", function (mouse) {
-		servicies.forTarget(function (serv) {
-			serv.classList.add("_active");
-		})
-	});
-})
-
-link.forEach(function (link) {
-	link.addEventListener("mouseout", function (mouse) {
-		servicies.forEach(function (serv) {
-			serv.classList.remove("_active");
-		})
-	});
-})*/
-
-/*
-link.forEach(function (link) {
-	link.addEventListener("mouseover", function (mouse) {
-		alert("0");
-		if (mouse.target) {
-			servicies.classList.add("_active");
-			alert("1");
-		}
-	});
-})*/
-
-/*link.forEach(function (link) {
-	link.addEventListener("mouseout", function () {
-		servicies.classList.remove("_active");
-	});
-})*/
-
 
 //СЛАЙДЕР QUOTES
 let quotes = new Swiper('.quotes__slider', {

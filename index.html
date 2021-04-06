@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="header__wrapper">
 			<div class="header__column header__column_1">
-				<div class="header__logotipe">
+				<div class="header__logotipe _anim-items">
 					<a href="#" class="header__hammer">
 						<img data-goto=".main" class="nav__link" src="img/header/hammer.png" alt="">
 					</a>
@@ -26,13 +26,13 @@
 				</div>
 			</div>
 			<div class="header__column header__column_2">
-				<div class="header__burger">
+				<div class="header__burger _anim-items">
 					<span></span>
 					<span></span>
 				</div>
 			</div>
 			<div class="header__column header__column_3">
-				<nav class="header__menu">
+				<nav class="header__menu _anim-items">
 					<ul class="header__list">
 						<li><a data-goto=".main" href="#" class="header__link nav__link">Главная</a></li>
 						<li><a data-goto=".lots" href="#" class="header__link nav__link">Аукцион</a></li>
@@ -43,7 +43,7 @@
 				</nav>
 			</div>
 			<div class="header__column header__column_4">
-				<div class="header__touch">
+				<div class="header__touch _anim-items">
 					<div class="header__region">
 						<a href="#" class="header__globe">
 							<img src="img/header/globe.png" alt="">
@@ -58,12 +58,12 @@
 								</div>
 							</div>
 							<div class="user__arrows">
-								<a href="#" class="user__arrow user__arrow_u">
+								<div class="user__arrow user__arrow_u">
 									<img src="img/header/arr_up.png" alt="">
-								</a>
-								<a href="#" class="user__arrow user__arrow_d">
+								</div>
+								<div class="user__arrow user__arrow_d">
 									<img src="img/header/arr_down.png" alt="">
-								</a>
+								</div>
 							</div>
 						</div>
 						<div class="header__drop-down drop-down">
@@ -87,8 +87,32 @@
 					<div class="main__wrapper swiper-wrapper">
 						<div class="main__slide swiper-slide">
 							<div class="container">
-								<div class="main__wrap">
-									<h1 class="main__title " data-swiper-parallax="-700" data-swiper-parallax-opacity="0">Только
+								<div class="main__wrap _anim-items _anim-no-hide">
+									<h1 class="main__title" data-swiper-parallax="-700" data-swiper-parallax-opacity="0">Только
+										эксклюзивные</h1>
+									<h2 class="main__subtitle" data-swiper-parallax="-500" data-swiper-parallax-opacity="0">Лоты
+										под
+										аукцион и свободную продажу
+									</h2>
+									<div class="main__text" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Мы
+										собираем
+										эксклюзивную публику и
+										экслюзивные лоты, даем удобный и
+										автоматизированный сервис по покупке и продаже, а также выставлению лотов на аукцион,
+										предоставляем личные кабинеты, а также оказываем сопутствубщие услуги с продажей редких и
+										дорогих вещей</div>
+									<a href="#" class="main__button" data-swiper-parallax="-100"
+										data-swiper-parallax-opacity="0">
+										<p>Присоединиться</p>
+										<span></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="main__slide swiper-slide ">
+							<div class="container">
+								<div class="main__wrap _anim-items _anim-no-hide">
+									<h1 class="main__title" data-swiper-parallax="-700" data-swiper-parallax-opacity="0">Только
 										эксклюзивные</h1>
 									<h2 class="main__subtitle" data-swiper-parallax="-500" data-swiper-parallax-opacity="0">Лоты
 										под
@@ -111,33 +135,8 @@
 						</div>
 						<div class="main__slide swiper-slide">
 							<div class="container">
-								<div class="main__wrap">
-									<h1 class="main__title " data-swiper-parallax="-700" data-swiper-parallax-opacity="0">Только
-										эксклюзивные</h1>
-									<h2 class="main__subtitle" data-swiper-parallax="-500" data-swiper-parallax-opacity="0">Лоты
-										под
-										аукцион и свободную продажу
-									</h2>
-									<div class="main__text" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">Мы
-										собираем
-										эксклюзивную публику и
-										экслюзивные лоты, даем удобный и
-										автоматизированный сервис по покупке и продаже, а также выставлению лотов на аукцион,
-										предоставляем личные кабинеты, а также оказываем сопутствубщие услуги с продажей редких и
-										дорогих вещей.
-									</div>
-									<a href="#" class="main__button" data-swiper-parallax="-100"
-										data-swiper-parallax-opacity="0">
-										<p>Присоединиться</p>
-										<span></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="main__slide swiper-slide">
-							<div class="container">
-								<div class="main__wrap">
-									<h1 class="main__title " data-swiper-parallax="-700" data-swiper-parallax-opacity="0">Только
+								<div class="main__wrap _anim-items _anim-no-hide">
+									<h1 class="main__title" data-swiper-parallax="-700" data-swiper-parallax-opacity="0">Только
 										эксклюзивные</h1>
 									<h2 class="main__subtitle" data-swiper-parallax="-500" data-swiper-parallax-opacity="0">Лоты
 										под
@@ -160,28 +159,29 @@
 						</div>
 					</div>
 				</div>
-				<div class="main__buttons">
-					<div class="main__prev">
+				<div class="main__buttons _anim-items _anim-no-hide">
+					<div class="main__prev _anim-items _anim-no-hide">
 					</div>
-					<div class="main__load">
+					<div class="main__load _anim-items _anim-no-hide">
 						<img src="img/main/load.png" alt="">
 					</div>
-					<div class="main__next"></div>
+					<div class="main__next _anim-items _anim-no-hide"></div>
 				</div>
 			</div>
 			<div class="lots">
 				<div class="container">
 					<div class="lots__title title">
 						<div class="title__wrapper">
-							<div class="title__label">Популярные</div>
-							<div class="title__sublabel">лоты Под аукцион</div>
+							<div class="title__label _anim-items _anim-no-hide">Популярные</div>
+							<div class="title__sublabel _anim-items _anim-no-hide">лоты Под аукцион</div>
 							<div class="title__bottom">
-								<div class="title__column title__column_1">
+								<div class="title__column title__column_1 _anim-items _anim-no-hide">
 									<span class="title__span-1"></span>
 									<span class="title__span-2"></span>
 								</div>
-								<div class="title__column title__column_2"><img src="img/title/01.png" alt=""></div>
-								<div class="title__column title__column_3">
+								<div class="title__column title__column_2 _anim-items _anim-no-hide"><img src="img/title/01.png"
+										alt=""></div>
+								<div class="title__column title__column_3 _anim-items _anim-no-hide">
 									<span class="title__span-1"></span>
 									<span class="title__span-2"></span>
 								</div>
@@ -804,7 +804,7 @@
 				<div class="container">
 					<div class="categories__wrapper">
 						<div class="categories__column">
-							<a href="#" class="categories__item">
+							<a href="#" class="categories__item _anim-items _anim-no-hide">
 								<img src="img/categories/01.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -820,8 +820,8 @@
 							</a>
 							<span class="categories__circle"></span>
 						</div>
-						<div class="categories__column categories__column_dn">
-							<a href="#" class="categories__item">
+						<div class="categories__column categories__column_dn ">
+							<a href="#" class="categories__item _anim-items _anim-no-hide">
 								<img src="img/categories/02.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -837,8 +837,8 @@
 							</a>
 							<span class="categories__circle categories__circle_dn"></span>
 						</div>
-						<div class="categories__column">
-							<a href="#" class="categories__item">
+						<div class="categories__column ">
+							<a href="#" class="categories__item _anim-items _anim-no-hide">
 								<img src="img/categories/03.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -854,8 +854,8 @@
 							</a>
 							<span class="categories__circle"></span>
 						</div>
-						<div class="categories__column categories__column_dn">
-							<a href="#" class="categories__item">
+						<div class="categories__column categories__column_dn ">
+							<a href="#" class="categories__item _anim-items _anim-no-hide">
 								<img src="img/categories/04.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -871,8 +871,8 @@
 							</a>
 							<span class="categories__circle categories__circle_dn"></span>
 						</div>
-						<div class="categories__column">
-							<a href="#" class="categories__item">
+						<div class="categories__column _anim-items _anim-no-hide">
+							<a href="#" class="categories__item _anim-items _anim-no-hide">
 								<img src="img/categories/05.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -888,8 +888,8 @@
 							</a>
 							<span class="categories__circle"></span>
 						</div>
-						<div class="categories__column categories__column_dn">
-							<a href="#" class="categories__item">
+						<div class="categories__column categories__column_dn ">
+							<a href="#" class="categories__item _anim-items _anim-no-hide">
 								<img src="img/categories/06.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -905,8 +905,8 @@
 							</a>
 							<span class="categories__circle categories__circle_dn"></span>
 						</div>
-						<div class="categories__column">
-							<a href="#" class="categories__item">
+						<div class="categories__column _anim-items _anim-no-hide">
+							<a href="#" class="categories__item _anim-items _anim-no-hide">
 								<img src="img/categories/07.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -922,8 +922,8 @@
 							</a>
 							<span class="categories__circle"></span>
 						</div>
-						<div class="categories__column categories__column_dn">
-							<a href="#" class="categories__item">
+						<div class="categories__column categories__column_dn ">
+							<a href="#" class="categories__item _anim-items _anim-no-hide">
 								<img src="img/categories/08.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -940,7 +940,7 @@
 							<span class="categories__circle categories__circle_dn"></span>
 						</div>
 						<div class="categories__column categories__column_dn">
-							<a href="#" class="categories__item">
+							<a href="#" class="categories__item  _anim-items _anim-no-hide">
 								<img src="img/categories/09.png" alt="" class="categories__background">
 								<div class="categories__hover">
 									<div class="categories__wrap">
@@ -992,15 +992,16 @@
 				<div class="container">
 					<div class="servicies__title title">
 						<div class="title__wrapper">
-							<div class="title__label">Дополнительные</div>
-							<div class="title__sublabel title__sublabel_w">услуги</div>
+							<div class="title__label _anim-items _anim-no-hide">Дополнительные</div>
+							<div class="title__sublabel _anim-items _anim-no-hide title__sublabel_w">услуги</div>
 							<div class="title__bottom">
-								<div class="title__column title__column_1">
+								<div class="title__column title__column_1 _anim-items _anim-no-hide">
 									<span class="title__span-1"></span>
 									<span class="title__span-2"></span>
 								</div>
-								<div class="title__column title__column_2"><img src="img/servicies/watch.png" alt=""></div>
-								<div class="title__column title__column_3">
+								<div class="title__column title__column_2 _anim-items _anim-no-hide"><img
+										src="img/servicies/watch.png" alt=""></div>
+								<div class="title__column title__column_3 _anim-items _anim-no-hide">
 									<span class="title__span-1"></span>
 									<span class="title__span-2"></span>
 								</div>
@@ -1008,7 +1009,7 @@
 						</div>
 					</div>
 					<div class="servicies__wrapper">
-						<div class="servicies__column">
+						<div class="servicies__column servicies__column_1 _anim-items _anim-no-hide">
 							<div class="servicies__image">
 								<div class="servicies__img">
 									<img src="img/servicies/01.png" alt="">
@@ -1024,7 +1025,7 @@
 								</a>
 							</table>
 						</div>
-						<div class="servicies__column">
+						<div class="servicies__column servicies__column_2 _anim-items _anim-no-hide">
 							<div class="servicies__image">
 								<div class="servicies__img">
 									<img src="img/servicies/02.png" alt="">
@@ -1039,7 +1040,7 @@
 								<span></span>
 							</a>
 						</div>
-						<div class="servicies__column">
+						<div class="servicies__column servicies__column_3 _anim-items _anim-no-hide">
 							<div class="servicies__image">
 								<div class="servicies__img">
 									<img src="img/servicies/03.png" alt="">
@@ -1060,15 +1061,16 @@
 				<div class="container">
 					<div class="quotes__title title">
 						<div class="title__wrapper">
-							<div class="title__label">Интересные</div>
-							<div class="title__sublabel">ЦитатЫ</div>
+							<div class="title__label  _anim-items _anim-no-hide">Интересные</div>
+							<div class="title__sublabel  _anim-items _anim-no-hide">ЦитатЫ</div>
 							<div class="title__bottom">
-								<div class="title__column title__column_1">
+								<div class="title__column title__column_1  _anim-items _anim-no-hide">
 									<span class="title__span-1"></span>
 									<span class="title__span-2"></span>
 								</div>
-								<div class="title__column title__column_2"><img src="img/quotes/title.png" alt=""></div>
-								<div class="title__column title__column_3">
+								<div class="title__column title__column_2  _anim-items _anim-no-hide"><img
+										src="img/quotes/title.png" alt=""></div>
+								<div class="title__column title__column_3  _anim-items _anim-no-hide	">
 									<span class="title__span-1"></span>
 									<span class="title__span-2"></span>
 								</div>
