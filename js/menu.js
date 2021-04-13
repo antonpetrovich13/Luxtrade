@@ -1,5 +1,3 @@
-
-
 //АНИМАЦИЯ ПРИ СКРОЛЛЕ
 const animItems = document.querySelectorAll('._anim-items');
 
@@ -18,10 +16,10 @@ if (animItems.length > 0) {
 			}
 
 			if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
-				animItem.classList.add('_active');
+				animItem.classList.add('_animation');
 			} else {
 				if (!animItem.classList.contains('_anim-no-hide')) {
-					animItem.classList.remove('_active');
+					animItem.classList.remove('_animation');
 				}
 			}
 		}
@@ -51,6 +49,18 @@ document.documentElement.addEventListener("click", function (e) {
 	}
 });
 
+//МЕНЮ-БУРГЕР
+
+const burgerMenu = document.querySelector('.header__burger');
+const menu = document.querySelector('.header__menu');
+if (burgerMenu) {
+	burgerMenu.addEventListener('click', function () {
+		document.body.classList.toggle('_lock');
+		burgerMenu.classList.toggle('_active');
+		menu.classList.toggle('_active');
+	})
+}
+
 //НАВИГАЦИЯ
 const menuLinks = document.querySelectorAll(".nav__link[data-goto]");
 if (menuLinks.length > 0) {
@@ -63,6 +73,12 @@ if (menuLinks.length > 0) {
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
 			const goToBlock = document.querySelector(menuLink.dataset.goto);
 			const goToBlockValue = goToBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+
+			if (burgerMenu.classList.contains('_active')) {
+				document.body.classList.remove('_lock');
+				burgerMenu.classList.remove('_active');
+				menu.classList.remove('_active');
+			}
 
 			window.scrollTo({
 				top: goToBlockValue,
