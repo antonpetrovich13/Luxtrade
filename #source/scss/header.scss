@@ -32,7 +32,7 @@
 		white-space: nowrap;
 		transition: all 3s ease 0.5s;
 		opacity: 0;
-		&._active {
+		&._animation {
 			opacity: 1;
 		}
 	}
@@ -48,7 +48,7 @@
 		display: none;
 		transition: all 3s ease 0.5s;
 		opacity: 0;
-		&._active {
+		&._animation {
 			opacity: 1;
 		}
 	}
@@ -59,7 +59,7 @@
 		margin: 0px 51px 0px 0px;
 		transition: all 3s ease 0.5s;
 		opacity: 0;
-		&._active {
+		&._animation {
 			opacity: 1;
 		}
 	}
@@ -114,7 +114,7 @@
 		align-items: center;
 		transition: all 3s ease 0.5s;
 		opacity: 0;
-		&._active {
+		&._animation {
 			opacity: 1;
 		}
 	}
@@ -348,7 +348,7 @@
 				transition: all 0.3s ease 0s;
 			}
 		}
-		&__burger.active {
+		&__burger._active {
 			top: 0;
 			transform: translate(0, 100%);
 			&:before {
@@ -377,7 +377,7 @@
 			transition: all 0.5s ease 0s;
 			opacity: 1;
 		}
-		.active {
+		._active {
 			top: 0;
 		}
 		&__list {

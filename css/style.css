@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-size: 14px;
   color: #000; }
-  body.lock {
+  body._lock {
     overflow: hidden; }
 
 @font-face {
@@ -168,7 +168,7 @@ button {
     -o-transition: all 3s ease 0.5s;
     transition: all 3s ease 0.5s;
     opacity: 0; }
-    .header__logotipe._active {
+    .header__logotipe._animation {
       opacity: 1; }
   .header__hammer {
     padding: 0px 2px 0px 0px; }
@@ -178,7 +178,7 @@ button {
     -o-transition: all 3s ease 0.5s;
     transition: all 3s ease 0.5s;
     opacity: 0; }
-    .header__burger._active {
+    .header__burger._animation {
       opacity: 1; }
   .header__menu {
     position: relative;
@@ -188,7 +188,7 @@ button {
     -o-transition: all 3s ease 0.5s;
     transition: all 3s ease 0.5s;
     opacity: 0; }
-    .header__menu._active {
+    .header__menu._animation {
       opacity: 1; }
   .header__list {
     display: -webkit-box;
@@ -244,7 +244,7 @@ button {
     -o-transition: all 3s ease 0.5s;
     transition: all 3s ease 0.5s;
     opacity: 0; }
-    .header__touch._active {
+    .header__touch._animation {
       opacity: 1; }
   .header__region {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -450,21 +450,21 @@ button {
         -webkit-transition: all 0.3s ease 0s;
         -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s; }
-    .header__burger.active {
+    .header__burger._active {
       top: 0;
       -webkit-transform: translate(0, 100%);
       -ms-transform: translate(0, 100%);
       transform: translate(0, 100%); }
-      .header__burger.active:before {
+      .header__burger._active:before {
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
         top: 7px; }
-      .header__burger.active span {
+      .header__burger._active span {
         -webkit-transform: scale(0);
         -ms-transform: scale(0);
         transform: scale(0); }
-      .header__burger.active:after {
+      .header__burger._active:after {
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         transform: rotate(-45deg);
@@ -484,7 +484,7 @@ button {
       -o-transition: all 0.5s ease 0s;
       transition: all 0.5s ease 0s;
       opacity: 1; }
-    .header .active {
+    .header ._active {
       top: 0; }
     .header__list {
       -webkit-box-orient: vertical;
@@ -543,7 +543,7 @@ button {
     -webkit-transform: translate(0, 10%);
     -ms-transform: translate(0, 10%);
     transform: translate(0, 10%); }
-    .main__wrap._active {
+    .main__wrap._animation {
       opacity: 1;
       -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
@@ -644,7 +644,7 @@ button {
     -webkit-transform: translate(-50%, 50%);
     -ms-transform: translate(-50%, 50%);
     transform: translate(-50%, 50%); }
-    .main__buttons._active {
+    .main__buttons._animation {
       -webkit-transition: all 2s ease 0.5s;
       -o-transition: all 2s ease 0.5s;
       transition: all 2s ease 0.5s;
@@ -674,7 +674,7 @@ button {
     -webkit-transform: translate(20px, 0) scale(0.5);
     -ms-transform: translate(20px, 0) scale(0.5);
     transform: translate(20px, 0) scale(0.5); }
-    .main__prev._active {
+    .main__prev._animation {
       opacity: 1;
       -webkit-transform: translate(0px, 0) scale(1);
       -ms-transform: translate(0px, 0) scale(1);
@@ -689,7 +689,7 @@ button {
     -webkit-transition: all 3s ease 1.1s;
     -o-transition: all 3s ease 1.1s;
     transition: all 3s ease 1.1s; }
-    .main__load._active {
+    .main__load._animation {
       opacity: 1; }
 
 @-webkit-keyframes load {
@@ -717,7 +717,7 @@ button {
     -webkit-transform: translate(-20px, 0) scale(0.5);
     -ms-transform: translate(-20px, 0) scale(0.5);
     transform: translate(-20px, 0) scale(0.5); }
-    .main__next._active {
+    .main__next._animation {
       opacity: 1;
       -webkit-transform: translate(0px, 0) scale(1);
       -ms-transform: translate(0px, 0) scale(1);
@@ -766,7 +766,7 @@ button {
   -ms-transform: translate(0, -20%);
   transform: translate(0, -20%);
   opacity: 0; }
-  .title__label._active {
+  .title__label._animation {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
@@ -788,7 +788,7 @@ button {
   -ms-transform: translate(0, -20%);
   transform: translate(0, -20%);
   opacity: 0; }
-  .title__sublabel._active {
+  .title__sublabel._animation {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
@@ -832,7 +832,7 @@ button {
     -webkit-transition: all 1.5s ease 0.5s;
     -o-transition: all 1.5s ease 0.5s;
     transition: all 1.5s ease 0.5s; }
-    .title__column_2._active {
+    .title__column_2._animation {
       -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
       transform: translate(0, 0);
@@ -845,7 +845,7 @@ button {
     -o-transition: all 1.5s ease 0.5s;
     transition: all 1.5s ease 0.5s;
     opacity: 0; }
-    .title__column_1._active {
+    .title__column_1._animation {
       opacity: 1;
       -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
@@ -858,7 +858,7 @@ button {
     -o-transition: all 1.5s ease 0.5s;
     transition: all 1.5s ease 0.5s;
     opacity: 0; }
-    .title__column_3._active {
+    .title__column_3._animation {
       opacity: 1;
       -webkit-transform: rotate(180deg) translate(0, 0);
       -ms-transform: rotate(180deg) translate(0, 0);
@@ -1508,7 +1508,7 @@ button {
     -webkit-transition: all 1s ease 0.1s;
     -o-transition: all 1s ease 0.1s;
     transition: all 1s ease 0.1s; }
-    .categories__item._active {
+    .categories__item._animation {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1); }
@@ -1698,7 +1698,7 @@ button {
     -ms-flex-align: center;
     align-items: center;
     opacity: 0; }
-    .servicies__column._active {
+    .servicies__column._animation {
       opacity: 1; }
     .servicies__column_1 {
       -webkit-transition: all 1s ease 1s;
