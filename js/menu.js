@@ -222,6 +222,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+let currentSeconds;
 //Обратный отсчет времени
 function createCounter() {
 	let currentDay = new Date();
@@ -238,7 +239,8 @@ function createCounter() {
 	let differenceOfSeconds = +((differenceOfDays / 1000) - (60 * differenceOfMinutes) - (3600 * differenceOfHours)).toString().slice(0, 2);
 	let differenceOfMilliseconds = Math.trunc((differenceOfDays - (1000 * differenceOfSeconds) - (60000 * differenceOfMinutes) - (3600000 * differenceOfHours)) / 10);
 
-
+	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	currentSeconds = differenceOfSeconds;
 
 	// Добавляю результат в соответствующие блоки HTML
 	document.querySelectorAll('.lots__time-hours').forEach((elem) => {
@@ -268,13 +270,18 @@ let timer = setInterval(function () {
 }, 1);
 
 
+//Переворачивание песочных часов при смене минуты
+let i = 0;
 
-//Переворачивание песочных часов со сменой минуты
-let observer = new MutationObserver(() => console.log(1));
+let timerForImage = setInterval(function () {
+	if (currentSeconds == 0) {
+		i++;
+		document.querySelectorAll('.slide-lots__clock').forEach((item) => {
+			item.style.transform = `rotate(${180 * (i)}deg)`;
+		})
+	}
+}, 1000)
 
-document.querySelectorAll('.lots__time-seconds').forEach((item) => {
-	observer.observe(item, {
-		characterData: true,
-	})
-})
+
+
 
