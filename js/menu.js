@@ -220,3 +220,61 @@ document.addEventListener('DOMContentLoaded', function () {
 		return !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test(input.value);
 	}
 });
+
+
+//Обратный отсчет времени
+function createCounter() {
+	let currentDay = new Date();
+
+	let nextDay = new Date();
+	nextDay.setDate(nextDay.getDate() + 1);
+	nextDay.setHours(00, 00, 00, 00);
+
+	//Рассчитываю разницу в часах, минутах, секундах, миллисекундах
+	let differenceOfDays = nextDay - currentDay;
+
+	let differenceOfHours = Math.trunc(differenceOfDays / 3600000);
+	let differenceOfMinutes = +((differenceOfDays / 60000) - (60 * differenceOfHours)).toString().slice(0, 2);
+	let differenceOfSeconds = +((differenceOfDays / 1000) - (60 * differenceOfMinutes) - (3600 * differenceOfHours)).toString().slice(0, 2);
+	let differenceOfMilliseconds = Math.trunc((differenceOfDays - (1000 * differenceOfSeconds) - (60000 * differenceOfMinutes) - (3600000 * differenceOfHours)) / 10);
+
+
+
+	// Добавляю результат в соответствующие блоки HTML
+	document.querySelectorAll('.lots__time-hours').forEach((elem) => {
+		elem.innerHTML = differenceOfHours;
+		if (differenceOfHours < 10) elem.innerHTML = '0' + differenceOfHours;
+	});
+
+	document.querySelectorAll('.lots__time-minutes').forEach((elem) => {
+		elem.innerHTML = differenceOfMinutes;
+		if (differenceOfMinutes < 10) elem.innerHTML = '0' + differenceOfMinutes;
+	});
+
+	document.querySelectorAll('.lots__time-seconds').forEach((elem) => {
+		elem.innerHTML = differenceOfSeconds;
+		if (differenceOfSeconds < 10) elem.innerHTML = '0' + differenceOfSeconds;
+	});
+
+	document.querySelectorAll('.lots__time-milliseconds').forEach((elem) => {
+		elem.innerHTML = differenceOfMilliseconds;
+		if (differenceOfMilliseconds < 10) elem.innerHTML = '0' + differenceOfMilliseconds;
+	});
+}
+createCounter();
+
+let timer = setInterval(function () {
+	createCounter()
+}, 1);
+
+
+
+//Переворачивание песочных часов со сменой минуты
+let observer = new MutationObserver(() => console.log(1));
+
+document.querySelectorAll('.lots__time-seconds').forEach((item) => {
+	observer.observe(item, {
+		characterData: true,
+	})
+})
+
