@@ -985,7 +985,10 @@ button {
   .slide-lots__timeset {
     text-align: center; }
   .slide-lots__clock {
-    margin: 0px 0px 7px 0px; }
+    margin: 0px 0px 7px 0px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
   .slide-lots__time {
     font-family: "PFDinTextCondPro";
     font-size: 18px;
